@@ -4,7 +4,7 @@ use clap::Parser;
 mod formatter;
 use formatter::*;
 
-/// Returns a buildstamp, like 23W42.12345
+/// Returns a buildstamp, like `23W42.12345`
 ///
 /// Useful for tagging builds and images
 #[derive(Parser, Debug)]
