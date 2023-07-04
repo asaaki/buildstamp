@@ -1,6 +1,6 @@
 [package]
 name = "buildstamp"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 
 description = "Returns a buildstamp, like `23W42.12345`"
