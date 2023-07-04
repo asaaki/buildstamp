@@ -16,11 +16,17 @@ You might not need it.
 ## Usage
 
 ```sh
-buildstamp #=> 23W42, a short stamp with year and week only, like Minecraft snapshots
+buildstamp
+#=> 23W42
+# a short stamp with year and week only
+# like Minecraft snapshots
 
-buildstamp minute #=> 23W42.12345, has <week day numer><hour><minute> added to it
+buildstamp minute
+#=> 23W42.12345
+# has <week day numer><hour><minute> added to it
 
-buildstamp --help # for more options
+buildstamp --help
+# for more options
 ```
 
 ## License
