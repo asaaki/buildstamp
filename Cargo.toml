@@ -8,7 +8,6 @@ description = "Returns a buildstamp, like `23W42.12345`"
 license = "MIT OR Apache-2.0"
 homepage = "https://github.com/asaaki/buildstamp"
 repository = "https://github.com/asaaki/buildstamp"
-documentation = "https://github.com/asaaki/buildstamp"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
