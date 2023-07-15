@@ -6,22 +6,22 @@ use time::{format_description::FormatItem, macros::format_description as fd};
 
 type Formatter = &'static [FormatItem<'static>];
 
-const WEEKLY: Formatter = fd!("[year repr:last_two]W[week_number]");
+const WEEKLY: Formatter = fd!("[year base:iso_week repr:last_two]W[week_number repr:iso]");
 
 const ON_MINUTE: Formatter = fd!("\
-    [year repr:last_two]W[week_number].\
+    [year base:iso_week repr:last_two]W[week_number repr:iso].\
     [weekday repr:monday][hour repr:24][minute]");
 
 const ON_SECOND: Formatter = fd!("\
-    [year repr:last_two]W[week_number].\
+    [year base:iso_week repr:last_two]W[week_number repr:iso].\
     [weekday repr:monday][hour repr:24][minute][second]");
 
 const ON_MILLIS: Formatter = fd!("\
-    [year repr:last_two]W[week_number].\
+    [year base:iso_week repr:last_two]W[week_number repr:iso].\
     [weekday repr:monday][hour repr:24][minute][second].[subsecond digits:3]");
 
 const HIGH_PREC: Formatter = fd!("\
-    [year repr:last_two]W[week_number].\
+    [year base:iso_week repr:last_two]W[week_number repr:iso].\
     [weekday repr:monday][hour repr:24][minute][second].[subsecond digits:9]");
 
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
@@ -59,6 +59,7 @@ impl std::fmt::Display for Format {
         s.fmt(f)
     }
 }
+
 impl std::str::FromStr for Format {
     type Err = String;
 
