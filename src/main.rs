@@ -13,11 +13,15 @@ struct Args {
     /// Which format to use for the buildstamp
     ///
     #[arg(
-        default_value_t = Format::Weekly,
         value_parser = PossibleValuesParser::new(Format::VALUES).map(|s| s.parse::<Format>().unwrap()),
-        ignore_case(true)
+        default_value_t = Format::Weekly,
+        ignore_case = true
     )]
     format: Format,
+
+    /// Add newline to the output
+    #[arg(short, long, default_value_t = false)]
+    newline: bool,
 
     /// Print all letters lowercased
     #[arg(short, long, default_value_t = false)]
@@ -49,6 +53,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     if args.lowercase {
         stamp = stamp.to_ascii_lowercase();
+    }
+    if args.newline {
+        stamp.push('\n');
     }
     print!("{stamp}");
     Ok(())
