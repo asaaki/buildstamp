@@ -11,6 +11,13 @@ repository = "https://github.com/asaaki/buildstamp"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "buildstamp_lib"
+
+[features]
+default = ["cli"]
+cli = ["dep:clap"]
+
 [dependencies]
-clap = { version = "4.5.1", features = ["derive", "env"] }
+clap = { version = "4.5.1", features = ["derive", "env"], optional = true }
 time = { version = "0.3.34", features = ["formatting", "macros"] }
