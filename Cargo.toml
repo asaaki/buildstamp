@@ -11,11 +11,12 @@ repository = "https://github.com/asaaki/buildstamp"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[lib]
-name = "buildstamp_lib"
+[[bin]]
+name = "buildstamp"
+required-features = ["cli"]
 
 [features]
-default = ["cli"]
+default = []
 cli = ["dep:clap"]
 
 [dependencies]

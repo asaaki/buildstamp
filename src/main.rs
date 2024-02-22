@@ -1,4 +1,4 @@
-use buildstamp_lib::{Buildstamp, Format};
+use buildstamp::{Buildstamp, Format};
 use clap::builder::{PossibleValuesParser, TypedValueParser};
 use clap::Parser;
 
@@ -35,7 +35,6 @@ struct Args {
         short,
         long,
         env,
-        // default_value_t = None,
         default_missing_value = "A",
         num_args(0..=1),
         ignore_case(true)
