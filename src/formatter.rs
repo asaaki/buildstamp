@@ -1,10 +1,10 @@
-use time::{format_description::FormatItem, macros::format_description as fd};
+use time::{format_description::BorrowedFormatItem, macros::format_description as fd};
 
 // https://man7.org/linux/man-pages/man1/date.1.html
 // STAMP = $(shell bash -c 'date +%gW%V.%w%H%M') # 22W50.12345
 // https://time-rs.github.io/book/api/format-description.html
 
-type Formatter = &'static [FormatItem<'static>];
+type Formatter = &'static [BorrowedFormatItem<'static>];
 
 const WEEKLY: Formatter = fd!("[year base:iso_week repr:last_two]W[week_number repr:iso]");
 

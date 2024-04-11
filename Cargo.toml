@@ -20,5 +20,5 @@ default = []
 cli = ["dep:clap"]
 
 [dependencies]
-clap = { version = "4.5.1", features = ["derive", "env"], optional = true }
-time = { version = "0.3.34", features = ["formatting", "macros"] }
+clap = { version = "4.5.4", features = ["derive", "env"], optional = true }
+time = { version = "0.3.36", features = ["formatting", "macros"] }
