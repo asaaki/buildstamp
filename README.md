@@ -1,4 +1,4 @@
-# builstamp
+# buildstamp
 
 Returns a buildstamp, like `23W42.12345`
 
