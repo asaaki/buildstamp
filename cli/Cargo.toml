@@ -1,0 +1,19 @@
+[package]
+name = "buildstamp-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+description = "CLI tool for buildstamp - Returns a buildstamp, like `23W42.12345`"
+
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/asaaki/buildstamp"
+repository = "https://github.com/asaaki/buildstamp"
+
+[[bin]]
+name = "buildstamp"
+path = "src/main.rs"
+
+[dependencies]
+buildstamp = { version = "0.3.0", path = ".." }
+clap = { version = "4.5.53", features = ["derive", "env"] }

@@ -15,7 +15,7 @@ You might not need it.
 
 ## Installation
 
-`cargo install buildstamp -F cli --locked`
+`cargo install buildstamp-cli --locked`
 
 ## Usage
 

@@ -56,8 +56,15 @@ dependencies = [
 name = "buildstamp"
 version = "0.3.0"
 dependencies = [
- "clap",
  "time",
+]
+
+[[package]]
+name = "buildstamp-cli"
+version = "0.3.0"
+dependencies = [
+ "buildstamp",
+ "clap",
 ]
 
 [[package]]

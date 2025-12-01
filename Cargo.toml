@@ -1,7 +1,18 @@
-[package]
+[workspace]
+resolver = "3"
+members = [".", "cli"]
+
+[workspace.package]
 name = "buildstamp"
 version = "0.3.0"
 edition = "2024"
+rust-version = "1.85.0"
+
+[package]
+name = "buildstamp"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
 
 description = "Returns a buildstamp, like `23W42.12345`"
 
@@ -11,14 +22,5 @@ repository = "https://github.com/asaaki/buildstamp"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[[bin]]
-name = "buildstamp"
-required-features = ["cli"]
-
-[features]
-default = []
-cli = ["dep:clap"]
-
 [dependencies]
-clap = { version = "4.5.53", features = ["derive", "env"], optional = true }
 time = { version = "0.3.44", features = ["formatting", "macros"] }

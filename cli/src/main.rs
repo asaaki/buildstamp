@@ -6,7 +6,7 @@ use clap::builder::{PossibleValuesParser, TypedValueParser};
 ///
 /// Useful for tagging builds and images
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about)]
+#[command(name = "buildstamp", author, version, about, long_about)]
 struct Args {
     /// Which format to use for the buildstamp
     ///
