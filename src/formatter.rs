@@ -24,8 +24,9 @@ const HIGH_PREC: Formatter = fd!("\
     [year base:iso_week repr:last_two]W[week_number repr:iso].\
     [weekday repr:monday][hour repr:24][minute][second].[subsecond digits:9]");
 
-#[derive(Copy, Clone, PartialEq, Eq, Debug)]
+#[derive(Copy, Clone, Default, PartialEq, Eq, Debug)]
 pub enum Format {
+    #[default]
     Weekly,
     OnMinute,
     OnSecond,

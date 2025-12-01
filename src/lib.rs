@@ -40,7 +40,7 @@ impl Buildstamp {
     /// Create a new buildstamp with the default format (weekly);
     /// no newline, no lowercase, and no minecraft suffix
     pub fn new() -> Self {
-        Self::new_with_format(Format::Weekly)
+        Self::new_with_format(Format::default())
     }
 
     /// Create a new buildstamp with the given format;
