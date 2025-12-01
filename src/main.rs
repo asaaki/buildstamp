@@ -1,6 +1,6 @@
 use buildstamp::{Buildstamp, Format};
-use clap::builder::{PossibleValuesParser, TypedValueParser};
 use clap::Parser;
+use clap::builder::{PossibleValuesParser, TypedValueParser};
 
 /// Returns a buildstamp, like `23W42.12345`
 ///

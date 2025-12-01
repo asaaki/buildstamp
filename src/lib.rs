@@ -21,9 +21,10 @@ impl std::fmt::Display for Buildstamp {
         let mut stamp = self.timestamp.format(self.format.formatter()).unwrap();
 
         if self.format == Format::Weekly
-            && let Some(minecraft) = &self.minecraft {
-                stamp.push_str(&minecraft.to_ascii_uppercase());
-            }
+            && let Some(minecraft) = &self.minecraft
+        {
+            stamp.push_str(&minecraft.to_ascii_uppercase());
+        }
         if self.lowercase {
             stamp = stamp.to_ascii_lowercase();
         }
