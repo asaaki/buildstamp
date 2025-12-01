@@ -1,7 +1,7 @@
 [package]
 name = "buildstamp"
-version = "0.2.1"
-edition = "2021"
+version = "0.3.0"
+edition = "2024"
 
 description = "Returns a buildstamp, like `23W42.12345`"
 
@@ -20,5 +20,5 @@ default = []
 cli = ["dep:clap"]
 
 [dependencies]
-clap = { version = "4.5.4", features = ["derive", "env"], optional = true }
-time = { version = "0.3.36", features = ["formatting", "macros"] }
+clap = { version = "4.5.53", features = ["derive", "env"], optional = true }
+time = { version = "0.3.44", features = ["formatting", "macros"] }
