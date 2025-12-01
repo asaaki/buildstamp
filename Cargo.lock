@@ -54,14 +54,14 @@ dependencies = [
 
 [[package]]
 name = "buildstamp"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "time",
 ]
 
 [[package]]
 name = "buildstamp-cli"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "buildstamp",
  "clap",
