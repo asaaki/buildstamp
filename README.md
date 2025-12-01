@@ -13,9 +13,17 @@ STAMP = $(shell bash -c 'date +%gW%V.%w%H%M')
 This is a highly opinionated tool.
 You might not need it.
 
-## Installation
+## Installation (CLI)
 
-`cargo install buildstamp-cli --locked`
+```sh
+cargo install buildstamp-cli --locked
+```
+
+### As a library
+
+```sh
+cargo add buildstamp
+```
 
 ## Usage
 
