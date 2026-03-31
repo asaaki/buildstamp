@@ -22,4 +22,4 @@ repository = "https://github.com/asaaki/buildstamp"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-time = { version = "0.3.45", features = ["formatting", "macros"] }
+time = { version = "0.3.47", features = ["formatting", "macros"] }
