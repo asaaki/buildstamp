@@ -11,6 +11,9 @@ license = "MIT OR Apache-2.0"
 homepage = "https://github.com/asaaki/buildstamp"
 repository = "https://github.com/asaaki/buildstamp"
 
+# [package.metadata.binstall]
+# https://github.com/cargo-bins/cargo-binstall/blob/main/SUPPORT.md
+
 [[bin]]
 name = "buildstamp"
 path = "src/main.rs"
